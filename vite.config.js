@@ -13,7 +13,8 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       rollupOptions: {
-        input: './src/main.jsx',
+        input: './index.html',
+        // input: './src/main.jsx',
       },
     },
     // server: {

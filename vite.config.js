@@ -14,13 +14,8 @@ export default defineConfig(({ mode }) => {
       outDir: 'dist',
       rollupOptions: {
         input: './index.html',
-        // input: './src/main.jsx',
       },
     },
-    // server: {
-    //   mimeTypes: {
-    //     'application/javascript': ['js', 'jsx'],
-    //   },
-    // },
+
   };
 });

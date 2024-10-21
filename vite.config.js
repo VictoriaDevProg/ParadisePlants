@@ -1,23 +1,25 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  base: "/Paradise/",
-  resolve: {
-    alias: {
-      '@': '/src',
+export default defineConfig(({ mode }) => {
+  return {
+    plugins: [react()],
+    base: mode === 'production' ? '/ParadisePlants/' : '/',
+    resolve: {
+      alias: {
+        '@': '/src',
+      },
     },
-  },
-  build: {
-    rollupOptions: {
-      input: './src/main.jsx',
+    build: {
+      outDir: 'dist',
+      rollupOptions: {
+        input: './src/main.jsx',
+      },
     },
-  },
-  server: {
-    mimeTypes: {
-      'application/javascript': ['js', 'jsx'],
-    },
-  },
+    // server: {
+    //   mimeTypes: {
+    //     'application/javascript': ['js', 'jsx'],
+    //   },
+    // },
+  };
 });

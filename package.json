@@ -1,15 +1,15 @@
 {
   "name": "plant-nursery",
-  "homepage": "https://victoriadevprog.github.io/Paradise/",
+  "homepage": "https://victoriadevprog.github.io/ParadisePlants/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Paradise/",
-    "preview": "vite preview",
+    "build": "vite build --base=/ParadisePlants/",
+    "preview": "vite preview --host",
     "predeploy": "npm run build",
-    "deploy": "touch ./output_folder/.nojekyll && gh-pages -d output_folder -t true",
+    "deploy": "touch ./dist/.nojekyll && gh-pages -d dist -t true",
     "lint": "eslint ."
   },
   "dependencies": {
